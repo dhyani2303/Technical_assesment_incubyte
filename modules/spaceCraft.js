@@ -2,6 +2,7 @@ const moveForward = require("./moveForward").moveForward;
 const moveBackward = require("./moveBackward").moveBackward;
 const turnLeft = require("./turnLeft").turnLeft;
 const turnRight = require("./turnRight").turnRight;
+const turnUp = require("./turnUp").turnUp;
 
 function spaceCraft(commands, start) {
   let direction = start.direction;
@@ -17,6 +18,8 @@ function spaceCraft(commands, start) {
       direction = turnLeft(direction);
     } else if (c === "r") {
       direction = turnRight(direction);
+    } else if (c === "u") {
+      direction = turnUp(direction);
     }
   }
   return { coordinates, direction };
